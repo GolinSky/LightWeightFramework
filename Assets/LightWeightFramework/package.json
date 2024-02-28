@@ -1,0 +1,12 @@
+{
+  "name": "com.light-weight-framework",
+  "version": "1.0.0",
+  "displayName": "LightWeight MVC Framework",
+  "description": "MVC based architecture",
+  "unity": "2022.3",
+  "author": {
+    "name": "Alex GolinSky",
+    "email": "golinsky97@gmail.com",
+    "url": "https://github.com/GolinSky/LightWeightFramework"
+  }
+}
