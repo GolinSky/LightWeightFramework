@@ -1,6 +1,6 @@
 {
   "name": "com.light-weight-framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "LightWeight MVC Framework",
   "description": "MVC based architecture",
   "unity": "2022.3",
