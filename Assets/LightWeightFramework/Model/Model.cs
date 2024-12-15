@@ -16,19 +16,19 @@ namespace LightWeightFramework.Model
         }
         public List<IModel> CurrentModels { get; } = new List<IModel>();
         
-        public TModelObserver GetModelObserver<TModelObserver>() where TModelObserver : IModelObserver
+        public virtual TModelObserver GetModelObserver<TModelObserver>() where TModelObserver : IModelObserver
         {
             if (this is TModelObserver modelObserver) return modelObserver;
             
             return GetModelInternal<TModelObserver>();
         }
 
-        public TModelObserver GetModel<TModelObserver>() where TModelObserver : IModel
+        public virtual TModelObserver GetModel<TModelObserver>() where TModelObserver : IModel
         {
             return GetModelInternal<TModelObserver>();
         }
 
-        private TModelObserver GetModelInternal<TModelObserver>() 
+        protected virtual TModelObserver GetModelInternal<TModelObserver>() 
         {
             foreach (var model in CurrentModels)
             {
@@ -41,14 +41,14 @@ namespace LightWeightFramework.Model
             return default;
         }
 
-        private Model AddModel(Model model)
+        protected virtual Model AddModel(Model model)
         {
             var instancedModel = Instantiate(model);
             CurrentModels.Add(instancedModel);
             return instancedModel;
         }
         
-        protected void AddInnerModels(params InnerModel[] model) 
+        protected virtual void AddInnerModels(params InnerModel[] model) 
         {
             foreach (InnerModel innerModel in model)
             {

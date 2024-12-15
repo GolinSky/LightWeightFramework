@@ -4,13 +4,18 @@ using UnityEngine;
 
 namespace LightWeightFramework.Components
 {
-    public abstract class View : MonoBehaviour, IView
+    public abstract class BaseView: MonoBehaviour, IView
     {
         [SerializeField] protected ViewComponent[] viewComponents;
-        public IModelObserver Model { get; private set; }
 
         public Transform Transform => transform;
         public ViewComponent[] ViewComponents => viewComponents;
+    }
+    
+    public abstract class View : BaseView
+    {
+        public IModelObserver Model { get; private set; }
+
 
         public virtual void Init(IModelObserver model)
         {
