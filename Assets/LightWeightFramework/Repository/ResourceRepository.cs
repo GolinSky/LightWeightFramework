@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LightWeightFramework.Components.Repository
+namespace LightWeightFramework.Repository
 {
     public class ResourceRepository : IRepository
     {

@@ -1,4 +1,4 @@
-namespace LightWeightFramework.Components.Service
+namespace LightWeightFramework.Service
 {
     public abstract class Service : IService
     {

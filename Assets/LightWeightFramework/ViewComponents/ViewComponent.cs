@@ -1,9 +1,16 @@
+using LightWeightFramework.Components;
 using LightWeightFramework.Model;
+using LightWeightFramework.Views;
 using UnityEngine;
 
-namespace LightWeightFramework.Components.ViewComponents
+namespace LightWeightFramework.ViewComponents
 {
-    public abstract class ViewComponent:MonoBehaviour
+    public interface IViewComponent
+    {
+        
+    }
+    
+    public abstract class ViewComponent:MonoBehaviour, IViewComponent
     {
         public virtual IModelObserver ModelObserver { get; protected set; }
         public virtual BaseView View { get; protected set; }
@@ -30,9 +37,5 @@ namespace LightWeightFramework.Components.ViewComponents
 
         protected virtual void OnInit(){}
         protected virtual void OnRelease(){}
-        
-        
     }
-
-
 }

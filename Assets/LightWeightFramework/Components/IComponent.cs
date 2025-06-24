@@ -1,4 +1,4 @@
-namespace LightWeightFramework.Components.Components
+namespace LightWeightFramework.Components
 {
     public interface IComponent:IEntity
     {

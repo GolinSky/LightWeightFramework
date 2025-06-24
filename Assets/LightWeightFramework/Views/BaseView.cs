@@ -1,8 +1,7 @@
-using LightWeightFramework.Components.ViewComponents;
-using LightWeightFramework.Model;
+using LightWeightFramework.ViewComponents;
 using UnityEngine;
 
-namespace LightWeightFramework.Components
+namespace LightWeightFramework.Views
 {
     public abstract class BaseView: MonoBehaviour, IView
     {

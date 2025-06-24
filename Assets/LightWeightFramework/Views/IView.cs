@@ -1,7 +1,6 @@
-using LightWeightFramework.Components.ViewComponents;
-using LightWeightFramework.Model;
+using LightWeightFramework.ViewComponents;
 
-namespace LightWeightFramework.Components
+namespace LightWeightFramework.Views
 {
     public interface IView
     {
